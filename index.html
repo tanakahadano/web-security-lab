@@ -176,3 +176,10 @@
 </script>
 </body>
 </html>
+// Додаткова перевірка наявності цифри у паролі
+const hasNumber = /\d/.test(password);
+if (!hasNumber) {
+    messageEl.textContent = 'Помилка: Пароль повинен містити хоча б одну цифру!';
+    messageEl.className = 'error';
+    return;
+}
